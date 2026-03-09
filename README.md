@@ -40,6 +40,9 @@ La clase implementa las siguientes operaciones:
 |--------|-------------|
 | `GetVersion()` | Obtiene la versión del chip DESFire |
 | `GetApplicationIDs()` | Lista las aplicaciones presentes en la tarjeta |
+| `SelectpplicationIDs()` | Selecciona app vía AID (robot) |
+| `AuthenticateAES()` | Intenta autenticarse con la tarjeta (robot) vía AES |
+| `AuthenticateTDEA()` | Intenta autenticarse con la tarjeta (robot) vía DES nativo |
 
 Estas operaciones permiten confirmar que la comunicación con la tarjeta está funcionando correctamente.
 
@@ -47,7 +50,7 @@ Estas operaciones permiten confirmar que la comunicación con la tarjeta está f
 
 # Qué NO hace esta clase
 
-Este ejemplo **no implementa funcionalidades completas de seguridad ni gestión de aplicaciones**.
+Este ejemplo **no implementa funcionalidades de gestión de aplicaciones**.
 
 Limitaciones:
 
