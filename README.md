@@ -12,7 +12,6 @@ El objetivo principal es validar que:
 
 Esta clase funciona como **programa de diagnóstico o smoke test** para confirmar que el entorno de desarrollo y la librería están configurados correctamente.
 
----
 
 # Objetivo
 
@@ -52,7 +51,6 @@ Este ejemplo **no implementa funcionalidades completas de seguridad ni gestión 
 
 Limitaciones:
 
-- No realiza autenticación segura
 - No modifica contenido de la tarjeta
 - No crea ni elimina aplicaciones
 - No gestiona archivos DESFire
@@ -64,9 +62,10 @@ Su propósito es **únicamente diagnóstico y validación de la librería**.
 # Arquitectura de capas
 
 La comunicación se realiza a través de las siguientes capas:
-
-- Aplicación Java -> DFCard (API DESFire)
-- JSCIOComManager -> wrapper PC/SC
+ 
+- PC/SC (winscard.dll)
+- JSCIOComManager (wrapper PC/SC)
+- DFCard (protocolo DESFire)
 
 ---
 
@@ -74,7 +73,9 @@ La comunicación se realiza a través de las siguientes capas:
 
 El programa utiliza clases incluidas en la librería:
 
-DESFirepackage.library.* DESFirepackage.library.middleware.* DESFirepackage.library.param.*
+- DESFirepackage.library.* 
+- DESFirepackage.library.middleware.*
+- DESFirepackage.library.param.*
 
 Principales clases utilizadas:
 
