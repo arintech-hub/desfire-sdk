@@ -14,12 +14,13 @@ package arin.testing;
  *   2) Seleccionar lector PICC por índice
  *   3) Conectar a la tarjeta
  *   4) Ejecutar:
- *        - GetVersion()
- *        - GetCardUID()
+ *        - GetVersion()
  *        - GetApplicationIDs()
+ *        - SelectApplication()
+ *        - AuthenticateAES()
+ *        - AuthenticateTDEA()
  *
- * IMPORTANTE:
- *   - Esta clase NO realiza autenticación. VERRRRRRRR
+ * IMPORTANTE:
  *   - Solo funciona si el reader ya está en modo ISO14443-4
  *
  * CAPAS INVOLUCRADAS:
